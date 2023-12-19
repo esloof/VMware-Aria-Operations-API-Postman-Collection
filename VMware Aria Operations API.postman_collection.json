@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "25ffcd33-fa86-4ddc-bfda-2ea8fed3003b",
+		"name": "VMware Aria Operations API",
+		"description": "VMware Aria Operations 8.14",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30729129"
+	},
+	"item": [
+		{
+			"name": "Acquire an Authentication Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"VMware1!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.178.36/suite-api/api/auth/token/acquire",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"178",
+						"36"
+					],
+					"path": [
+						"suite-api",
+						"api",
+						"auth",
+						"token",
+						"acquire"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adapter Kinds",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Alerts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Version Info",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "OpsToken 929b0d15-3fc7-4b58-b8fa-21d421b0acf6::3517b62e-6df9-4986-a33c-4c3c5b4aeef1"
+					}
+				],
+				"url": {
+					"raw": "https://192.168.178.36/suite-api/api/versions?_no_links=true",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"178",
+						"36"
+					],
+					"path": [
+						"suite-api",
+						"api",
+						"versions"
+					],
+					"query": [
+						{
+							"key": "_no_links",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
